@@ -30,6 +30,21 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 # Application definition
 
+LOGGING = {
+ 'version': 1,
+ 'disable_existing_loggers': False,
+ 'handlers': {
+ 'console': {
+ 'level': 'DEBUG',
+ 'class': 'logging.StreamHandler',
+ },
+ },
+ 'root': {
+ 'level': 'INFO',
+ 'handlers': ['console']
+ },
+}
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
